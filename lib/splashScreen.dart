@@ -21,7 +21,7 @@ class _splashScreenState extends State<splashScreen> {
   Widget build(BuildContext context) {
     // TODO: implement build
 
-    return SafeArea(
+    return const SafeArea(
       child: Scaffold(
         backgroundColor: myColors.splashBg,
         body: Center(
