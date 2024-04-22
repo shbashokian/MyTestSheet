@@ -2,15 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:my_test_sheet/colors.dart';
-import 'package:my_test_sheet/first_page.dart';
-import 'package:my_test_sheet/splashScreen.dart';
+import 'package:my_test_sheet/view/first_page.dart';
+import 'package:my_test_sheet/view/splashScreen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
+
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: myColors.mainpageColor,
     statusBarIconBrightness: Brightness.dark,
-    systemNavigationBarColor: Color.fromARGB(255, 176, 22, 2),
+    //systemNavigationBarColor: Color.fromARGB(255, 176, 22, 2),
   ));
+
   runApp(const MyApp());
 }
 

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_test_sheet/second_page.dart';
+import 'package:my_test_sheet/view/second_page.dart';
 
 class firstPage extends StatelessWidget {
   TextEditingController InstagramIdController = TextEditingController();
