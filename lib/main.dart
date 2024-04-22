@@ -10,7 +10,7 @@ void main() async {
 
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
 
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: myColors.mainpageColor,
     statusBarIconBrightness: Brightness.dark,
     //systemNavigationBarColor: Color.fromARGB(255, 176, 22, 2),
