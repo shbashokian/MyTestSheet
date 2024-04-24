@@ -4,8 +4,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_test_sheet/colors.dart';
+import 'package:my_test_sheet/view/inner_screen.dart';
+import 'package:my_test_sheet/view/profile_screen.dart';
 
 class main_screen extends StatelessWidget {
+  int selectedMenu = 0;
   @override
   Widget build(BuildContext context) {
     double sizeH = MediaQuery.of(context).size.height;
@@ -407,9 +410,11 @@ class main_screen extends StatelessWidget {
                       ),
                       InkWell(
                         onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                            content: Text('Medical Articles Button'),
-                          ));
+                          selectedMenu = 0;
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => inner(data: selectedMenu)),
+                          );
                         },
                         child: Container(
                           width: sizeW / 3.5,
@@ -458,9 +463,11 @@ class main_screen extends StatelessWidget {
                       ),
                       InkWell(
                         onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                            content: Text('User Profile Button'),
-                          ));
+                          selectedMenu = 1;
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => inner(data: selectedMenu)),
+                          );
                         },
                         child: Container(
                           width: sizeW / 3.5,

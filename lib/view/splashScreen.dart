@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_test_sheet/view/blog_screen.dart';
 import 'package:my_test_sheet/colors.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:my_test_sheet/view/main_screen.dart';
@@ -13,7 +12,7 @@ class _splashScreenState extends State<splashScreen> {
   @override
   void initState() {
     Future.delayed(Duration(seconds: 3)).then((value) {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => blog()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => main_screen()));
     });
     super.initState();
   }
