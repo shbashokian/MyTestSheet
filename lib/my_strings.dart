@@ -6,4 +6,7 @@ class myStrings {
   static const String editProfileAvatar = "تغییر تصویر پروفایل";
   static const String logOut = "خروج از حساب کاربری";
   static const String myFav = "علاقمندی های من";
+  static const String welcome = """ به اپلیکیشن برگه آزمایش من خوش آمدید.
+  
+  برای استفاده از تمامی امکانات اپلیکیشن ثبت نام کنید!""";
 }

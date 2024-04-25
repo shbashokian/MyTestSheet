@@ -57,7 +57,12 @@ class _inner extends State<inner> {
           ),
         ),
         body: Stack(children: [
-          innerScreenWidgets[selectedIndex != -1 ? selectedIndex : widget.data],
+          //innerScreenWidgets[selectedIndex != -1 ? selectedIndex : widget.data]
+
+          IndexedStack(
+            index: selectedIndex != -1 ? selectedIndex : widget.data,
+            children: [BlogScreen(sizeW: sizeW, sizeH: sizeH, textTheme: textTheme), ProfileScreen(sizeW: sizeW, sizeH: sizeH, textTheme: textTheme)],
+          ),
           BottomNav(
             sizeH: sizeH,
             changeScreen: (int value) {
