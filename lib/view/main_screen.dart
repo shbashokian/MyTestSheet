@@ -6,6 +6,7 @@ import 'package:flutter/widgets.dart';
 import 'package:my_test_sheet/colors.dart';
 import 'package:my_test_sheet/view/inner_screen.dart';
 import 'package:my_test_sheet/view/profile_screen.dart';
+import 'package:my_test_sheet/view/register_intro.dart';
 
 class main_screen extends StatelessWidget {
   int selectedMenu = 0;
@@ -359,9 +360,10 @@ class main_screen extends StatelessWidget {
                     children: [
                       InkWell(
                         onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                            content: Text('Settings Button'),
-                          ));
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => RegisterIntro()),
+                          );
                         },
                         child: Container(
                           width: sizeW / 3.5,
